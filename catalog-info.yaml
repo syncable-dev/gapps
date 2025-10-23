@@ -4,7 +4,6 @@ metadata:
   name: gapps
   annotations:
     github.com/project-slug: syncable-dev/gapps
-    argocd/app-name: example-app
 spec:
   type: other
   lifecycle: unknown
