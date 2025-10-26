@@ -10,31 +10,31 @@ metadata:
     syncable.dev/resource-type: database-instance
   annotations:
     crossplane.io/external-name: db-3890fc7-maindb
-    syncable.dev/engine: mysql
+    syncable.dev/engine: postgres
     syncable.dev/created-by: backstage-scaffolder
 spec:
   forProvider:
-    databaseVersion: MYSQL_8_0
+    databaseVersion: POSTGRES_15
     region: europe-west1
     settings:
-      - tier: db-f1-micro
-        diskSize: 10
-        diskType: PD_SSD
-        availabilityType: ZONAL
-        backupConfiguration:
-          - enabled: true
-            startTime: 03:00
-            pointInTimeRecoveryEnabled: true
-            transactionLogRetentionDays: 7
-            backupRetentionSettings:
-              - retainedBackups: 7
-                retentionUnit: COUNT
-        ipConfiguration:
-          - ipv4Enabled: false
-        maintenanceWindow:
-          - day: 7
-            hour: 3
-            updateTrack: stable
+      tier: db-f1-micro
+      diskSize: 10
+      diskType: PD_SSD
+      availabilityType: ZONAL
+      backupConfiguration:
+        enabled: true
+        startTime: 03:00
+        pointInTimeRecoveryEnabled: true
+        transactionLogRetentionDays: 7
+        backupRetentionSettings:
+          retainedBackups: 7
+          retentionUnit: COUNT
+      ipConfiguration:
+        ipv4Enabled: false
+      maintenanceWindow:
+        day: 7
+        hour: 3
+        updateTrack: stable
     deletionProtection: false
   providerConfigRef:
     name: default

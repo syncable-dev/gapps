@@ -14,7 +14,7 @@ metadata:
 type: Opaque
 stringData:
   username: user
-  password: mfbz9yzxn
+  password: Mfbz9yzxn
   database: db1
   host: db-3890fc7-maindb.customer-3890fc7e918f417331ecfa75716b95b087760c245ba66adf95.svc.cluster.local
-  port: "3306"
+  port: "5432"
