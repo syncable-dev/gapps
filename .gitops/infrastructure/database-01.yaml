@@ -1,7 +1,7 @@
 apiVersion: sql.gcp.upbound.io/v1beta1
 kind: DatabaseInstance
 metadata:
-  name: U8TnFI7z1NHnF6ZhQ2TZtTLidSxUkjso-maindb
+  name: 3890fc7e-maindb
   namespace: customer-3890fc7e918f417331ecfa75716b95b087760c245ba66adf95
   labels:
     app.kubernetes.io/name: maindb
@@ -40,5 +40,5 @@ spec:
   providerConfigRef:
     name: default
   writeConnectionSecretToRef:
-    name: U8TnFI7z1NHnF6ZhQ2TZtTLidSxUkjso-maindb-connection
+    name: 3890fc7e-maindb-connection
     namespace: customer-3890fc7e918f417331ecfa75716b95b087760c245ba66adf95
