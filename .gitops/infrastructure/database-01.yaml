@@ -10,11 +10,11 @@ metadata:
     syncable.dev/project-id: f8987309-3069-4580-91c8-89b885249c57
     syncable.dev/resource-type: database
   annotations:
-    syncable.dev/engine: postgres
+    syncable.dev/engine: mysql
     syncable.dev/created-by: backstage-scaffolder
 spec:
   forProvider:
-    databaseVersion: POSTGRES_15
+    databaseVersion: MYSQL_15
     region: europe-west1
     settings:
       - tier: db-f1-micro
