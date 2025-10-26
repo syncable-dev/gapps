@@ -1,12 +1,12 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: gapps
+  name: api
   namespace: customer-3890fc7e918f417331ecfa75716b95b087760c245ba66adf95
   labels: &a1
-    app.kubernetes.io/name: gapps
-    app.kubernetes.io/instance: 3890fc7e-gapps
-    app.kubernetes.io/version: 4e74dbe
+    app.kubernetes.io/name: api
+    app.kubernetes.io/instance: 3890fc7e-api
+    app.kubernetes.io/version: 546d173
     app.kubernetes.io/component: backend
     app.kubernetes.io/part-of: 3890fc7e918f417331ecfa75716b95b087760c245ba66adf95
     app.kubernetes.io/managed-by: syncable
@@ -14,8 +14,8 @@ metadata:
     syncable.dev/project-id: f8987309-3069-4580-91c8-89b885249c57
     environment: production
   annotations: &a2
-    backstage.io/kubernetes-id: gapps
-    syncable.dev/image-digest: sha256:c695db5e241faa7c4daba1981c4f32c39d920e536ca62b2b09378cb221605cc2
+    backstage.io/kubernetes-id: api
+    syncable.dev/image-digest: sha256:f53bcccc9c811f2c696c8c48db3ae3da42b34e14cbb985f251339a8a1f02218e
     syncable.dev/generated-by: backstage-scaffolder
 spec:
   replicas: 3
@@ -26,8 +26,8 @@ spec:
       maxUnavailable: 0
   selector:
     matchLabels:
-      app.kubernetes.io/name: gapps
-      app.kubernetes.io/instance: 3890fc7e-gapps
+      app.kubernetes.io/name: api
+      app.kubernetes.io/instance: 3890fc7e-api
   template:
     metadata:
       labels: *a1
@@ -40,8 +40,8 @@ spec:
         seccompProfile:
           type: RuntimeDefault
       containers:
-        - name: gapps
-          image: europe-docker.pkg.dev/syncable-461014/syncable-customer-images/customers/u8tnfi7z1nhnf6zhq2tzttlidsxukjso-df7f4cf7/f8987309-3069-4580-91c8-89b885249c57-c5528d1c-gapps:4e74dbe
+        - name: api
+          image: europe-docker.pkg.dev/syncable-461014/syncable-customer-images/customers/u8tnfi7z1nhnf6zhq2tzttlidsxukjso-df7f4cf7/f8987309-3069-4580-91c8-89b885249c57-c5528d1c-api:546d173
           imagePullPolicy: Always
           ports:
             - name: http
@@ -51,22 +51,22 @@ spec:
             - name: NODE_ENV
               valueFrom:
                 configMapKeyRef:
-                  name: gapps-config
+                  name: api-config
                   key: NODE_ENV
             - name: LOG_LEVEL
               valueFrom:
                 configMapKeyRef:
-                  name: gapps-config
+                  name: api-config
                   key: LOG_LEVEL
             - name: PORT
               valueFrom:
                 configMapKeyRef:
-                  name: gapps-config
+                  name: api-config
                   key: PORT
             - name: HOST_NAME
               valueFrom:
                 configMapKeyRef:
-                  name: gapps-config
+                  name: api-config
                   key: HOST_NAME
           resources:
             requests:

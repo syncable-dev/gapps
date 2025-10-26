@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: gapps
+  name: api
   namespace: customer-3890fc7e918f417331ecfa75716b95b087760c245ba66adf95
   labels:
-    app.kubernetes.io/name: gapps
-    app.kubernetes.io/instance: 3890fc7e-gapps
-    app.kubernetes.io/version: 4e74dbe
+    app.kubernetes.io/name: api
+    app.kubernetes.io/instance: 3890fc7e-api
+    app.kubernetes.io/version: 546d173
     app.kubernetes.io/component: backend
     app.kubernetes.io/part-of: 3890fc7e918f417331ecfa75716b95b087760c245ba66adf95
     app.kubernetes.io/managed-by: syncable
@@ -16,8 +16,8 @@ metadata:
 spec:
   type: ClusterIP
   selector:
-    app.kubernetes.io/name: gapps
-    app.kubernetes.io/instance: U8TnFI7z1NHnF6ZhQ2TZtTLidSxUkjso-gapps
+    app.kubernetes.io/name: api
+    app.kubernetes.io/instance: U8TnFI7z1NHnF6ZhQ2TZtTLidSxUkjso-api
   ports:
     - name: http
       port: 80
