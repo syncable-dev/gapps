@@ -1,0 +1,23 @@
+apiVersion: sql.gcp.upbound.io/v1beta2
+kind: User
+metadata:
+  name: db-3890fc7-maindb-user
+  labels:
+    app.kubernetes.io/name: maindb
+    app.kubernetes.io/managed-by: syncable
+    syncable.dev/customer-id: U8TnFI7z1NHnF6ZhQ2TZtTLidSxUkjso
+    syncable.dev/project-id: f8987309-3069-4580-91c8-89b885249c57
+    syncable.dev/resource-type: database-user
+  annotations:
+    crossplane.io/external-name: user
+    syncable.dev/created-by: backstage-scaffolder
+spec:
+  forProvider:
+    instanceRef:
+      name: db-3890fc7-maindb
+    passwordSecretRef:
+      key: password
+      name: db-3890fc7-maindb-credentials
+      namespace: customer-3890fc7e918f417331ecfa75716b95b087760c245ba66adf95
+  providerConfigRef:
+    name: default
