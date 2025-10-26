@@ -6,7 +6,7 @@ metadata:
   labels:
     app.kubernetes.io/name: gapps
     app.kubernetes.io/instance: U8TnFI7z1NHnF6ZhQ2TZtTLidSxUkjso-gapps
-    app.kubernetes.io/version: f7de7e8
+    app.kubernetes.io/version: 741904a
     app.kubernetes.io/component: backend
     app.kubernetes.io/part-of: U8TnFI7z1NHnF6ZhQ2TZtTLidSxUkjso-f8987309-3069-4580-91c8-89b885249c57
     app.kubernetes.io/managed-by: syncable
@@ -18,4 +18,4 @@ data:
   NODE_ENV: production
   LOG_LEVEL: info
   PORT: "8080"
-  HOST_NAME: localhost:8080
+  HOST_NAME: localhost:5050
