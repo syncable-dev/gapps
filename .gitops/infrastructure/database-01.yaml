@@ -1,0 +1,44 @@
+apiVersion: sql.gcp.upbound.io/v1beta1
+kind: DatabaseInstance
+metadata:
+  name: U8TnFI7z1NHnF6ZhQ2TZtTLidSxUkjso-maindb
+  namespace: customer-3890fc7e918f417331ecfa75716b95b087760c245ba66adf95
+  labels:
+    app.kubernetes.io/name: maindb
+    app.kubernetes.io/managed-by: syncable
+    syncable.dev/customer-id: U8TnFI7z1NHnF6ZhQ2TZtTLidSxUkjso
+    syncable.dev/project-id: f8987309-3069-4580-91c8-89b885249c57
+    syncable.dev/resource-type: database
+  annotations:
+    syncable.dev/engine: postgres
+    syncable.dev/created-by: backstage-scaffolder
+spec:
+  forProvider:
+    databaseVersion: POSTGRES_15
+    region: europe-west1
+    settings:
+      - tier: db-f1-micro
+        diskSize: 10
+        diskType: PD_SSD
+        availabilityType: ZONAL
+        backupConfiguration:
+          - enabled: true
+            startTime: 03:00
+            pointInTimeRecoveryEnabled: true
+            transactionLogRetentionDays: 7
+            backupRetentionSettings:
+              - retainedBackups: 7
+                retentionUnit: COUNT
+        ipConfiguration:
+          - ipv4Enabled: false
+            requireSsl: true
+        maintenanceWindow:
+          - day: 7
+            hour: 3
+            updateTrack: stable
+    deletionProtection: false
+  providerConfigRef:
+    name: default
+  writeConnectionSecretToRef:
+    name: U8TnFI7z1NHnF6ZhQ2TZtTLidSxUkjso-maindb-connection
+    namespace: customer-3890fc7e918f417331ecfa75716b95b087760c245ba66adf95
