@@ -2,11 +2,11 @@ apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
   name: gapps-hpa
-  namespace: customer-u8tnfi7z1nhnf6zhq2tzttlidsxukjso-f8987309-3069-4580-91c8-89b885249c57
+  namespace: customer-3890fc7e918f417331ecfa75716b95b087760c245ba66adf95
   labels:
     app.kubernetes.io/name: gapps
     app.kubernetes.io/instance: U8TnFI7z1NHnF6ZhQ2TZtTLidSxUkjso-gapps
-    app.kubernetes.io/version: 658255b
+    app.kubernetes.io/version: f7de7e8
     app.kubernetes.io/component: backend
     app.kubernetes.io/part-of: U8TnFI7z1NHnF6ZhQ2TZtTLidSxUkjso-f8987309-3069-4580-91c8-89b885249c57
     app.kubernetes.io/managed-by: syncable

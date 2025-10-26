@@ -2,7 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
   name: allow-internal-and-ingress
-  namespace: customer-u8tnfi7z1nhnf6zhq2tzttlidsxukjso-f8987309-3069-4580-91c8-89b885249c57
+  namespace: customer-3890fc7e918f417331ecfa75716b95b087760c245ba66adf95
   labels:
     syncable.dev/customer-id: U8TnFI7z1NHnF6ZhQ2TZtTLidSxUkjso
     syncable.dev/project-id: f8987309-3069-4580-91c8-89b885249c57
