@@ -31,7 +31,6 @@ spec:
                 retentionUnit: COUNT
         ipConfiguration:
           - ipv4Enabled: false
-            requireSsl: true
         maintenanceWindow:
           - day: 7
             hour: 3
