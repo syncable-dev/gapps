@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: gapps-config
+  name: api-config
   namespace: customer-3890fc7e918f417331ecfa75716b95b087760c245ba66adf95
   labels:
-    app.kubernetes.io/name: gapps
-    app.kubernetes.io/instance: U8TnFI7z1NHnF6ZhQ2TZtTLidSxUkjso-gapps
-    app.kubernetes.io/version: 1e0e93c
+    app.kubernetes.io/name: api
+    app.kubernetes.io/instance: 3890fc7e-api
+    app.kubernetes.io/version: 0ab1ddb
     app.kubernetes.io/component: backend
-    app.kubernetes.io/part-of: U8TnFI7z1NHnF6ZhQ2TZtTLidSxUkjso-f8987309-3069-4580-91c8-89b885249c57
+    app.kubernetes.io/part-of: 3890fc7e918f417331ecfa75716b95b087760c245ba66adf95
     app.kubernetes.io/managed-by: syncable
     syncable.dev/customer-id: U8TnFI7z1NHnF6ZhQ2TZtTLidSxUkjso
     syncable.dev/project-id: f8987309-3069-4580-91c8-89b885249c57
@@ -17,5 +17,5 @@ immutable: true
 data:
   NODE_ENV: production
   LOG_LEVEL: info
-  PORT: "8080"
+  PORT: "8079"
   HOST_NAME: localhost:8080
