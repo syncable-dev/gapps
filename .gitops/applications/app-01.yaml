@@ -2,11 +2,11 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: gapps
-  namespace: customer-U8TnFI7z1NHnF6ZhQ2TZtTLidSxUkjso
+  namespace: customer-u8tnfi7z1nhnf6zhq2tzttlidsxukjso-f8987309-3069-4580-91c8-89b885249c57
   labels: &a1
     app.kubernetes.io/name: gapps
     app.kubernetes.io/instance: U8TnFI7z1NHnF6ZhQ2TZtTLidSxUkjso-gapps
-    app.kubernetes.io/version: 4f77176
+    app.kubernetes.io/version: 658255b
     app.kubernetes.io/component: backend
     app.kubernetes.io/part-of: U8TnFI7z1NHnF6ZhQ2TZtTLidSxUkjso-f8987309-3069-4580-91c8-89b885249c57
     app.kubernetes.io/managed-by: syncable
@@ -15,7 +15,7 @@ metadata:
     environment: production
   annotations: &a2
     backstage.io/kubernetes-id: gapps
-    syncable.dev/image-digest: sha256:da4bb12878876a99a64736623d0dfb444468820b4f160b592628479173a21c54
+    syncable.dev/image-digest: sha256:ec00ec6f38fc3a7000a1db54d16072756a78283adefb011105c9d1f4d2c91255
     syncable.dev/generated-by: backstage-scaffolder
 spec:
   replicas: 3
@@ -41,7 +41,7 @@ spec:
           type: RuntimeDefault
       containers:
         - name: gapps
-          image: europe-docker.pkg.dev/syncable-461014/syncable-customer-images/customers/u8tnfi7z1nhnf6zhq2tzttlidsxukjso-df7f4cf7/f8987309-3069-4580-91c8-89b885249c57-c5528d1c-gapps:4f77176
+          image: europe-docker.pkg.dev/syncable-461014/syncable-customer-images/customers/u8tnfi7z1nhnf6zhq2tzttlidsxukjso-df7f4cf7/f8987309-3069-4580-91c8-89b885249c57-c5528d1c-gapps:658255b
           imagePullPolicy: Always
           ports:
             - name: http
