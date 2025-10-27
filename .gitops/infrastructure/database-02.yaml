@@ -1,19 +1,16 @@
-apiVersion: sql.gcp.upbound.io/v1beta1
-kind: Database
+apiVersion: v1
+kind: Secret
 metadata:
-  name: db-3890fc7-db1-db
+  name: pgadmin-61c5b558-password-secret
+  namespace: customer-61c5b55857888989272c39be043f64d2a9e7b592c5eb4ba02a
   labels:
-    app.kubernetes.io/name: db1
+    app.kubernetes.io/name: pgadmin
     app.kubernetes.io/managed-by: syncable
     syncable.dev/customer-id: U8TnFI7z1NHnF6ZhQ2TZtTLidSxUkjso
-    syncable.dev/project-id: f8987309-3069-4580-91c8-89b885249c57
-    syncable.dev/resource-type: database
+    syncable.dev/project-id: 96bdb925-c99f-4adf-8b4c-cb6b61d81673
+    syncable.dev/resource-type: pgadmin-credentials
   annotations:
-    crossplane.io/external-name: db1
     syncable.dev/created-by: backstage-scaffolder
-spec:
-  forProvider:
-    instanceRef:
-      name: db-3890fc7-db1
-  providerConfigRef:
-    name: default
+type: Opaque
+stringData:
+  password: pgadmin-j4ecliyed4
