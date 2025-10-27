@@ -1,9 +1,9 @@
 apiVersion: sql.gcp.upbound.io/v1beta1
 kind: Database
 metadata:
-  name: db-3890fc7-maindb-db
+  name: db-3890fc7-db1-db
   labels:
-    app.kubernetes.io/name: maindb
+    app.kubernetes.io/name: db1
     app.kubernetes.io/managed-by: syncable
     syncable.dev/customer-id: U8TnFI7z1NHnF6ZhQ2TZtTLidSxUkjso
     syncable.dev/project-id: f8987309-3069-4580-91c8-89b885249c57
@@ -14,6 +14,6 @@ metadata:
 spec:
   forProvider:
     instanceRef:
-      name: db-3890fc7-maindb
+      name: db-3890fc7-db1
   providerConfigRef:
     name: default

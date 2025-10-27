@@ -1,15 +1,15 @@
 apiVersion: sql.gcp.upbound.io/v1beta2
 kind: DatabaseInstance
 metadata:
-  name: db-3890fc7-maindb
+  name: db-3890fc7-db1
   labels:
-    app.kubernetes.io/name: maindb
+    app.kubernetes.io/name: db1
     app.kubernetes.io/managed-by: syncable
     syncable.dev/customer-id: U8TnFI7z1NHnF6ZhQ2TZtTLidSxUkjso
     syncable.dev/project-id: f8987309-3069-4580-91c8-89b885249c57
     syncable.dev/resource-type: database-instance
   annotations:
-    crossplane.io/external-name: db-3890fc7-maindb
+    crossplane.io/external-name: db-3890fc7-db1
     syncable.dev/engine: postgres
     syncable.dev/created-by: backstage-scaffolder
 spec:
@@ -39,5 +39,5 @@ spec:
   providerConfigRef:
     name: default
   writeConnectionSecretToRef:
-    name: db-3890fc7-maindb-instance-connection
+    name: db-3890fc7-db1-instance-connection
     namespace: customer-3890fc7e918f417331ecfa75716b95b087760c245ba66adf95
