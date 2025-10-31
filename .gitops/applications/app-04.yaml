@@ -6,7 +6,7 @@ metadata:
   labels:
     app.kubernetes.io/name: gapps
     app.kubernetes.io/instance: 8cb48a92-gapps
-    app.kubernetes.io/version: 6742f1e
+    app.kubernetes.io/version: fe2ec23
     app.kubernetes.io/component: backend
     app.kubernetes.io/part-of: 8cb48a92f47d8b2d8301f1dd2ebde31b85aa85d714b07e7c16
     app.kubernetes.io/managed-by: syncable
