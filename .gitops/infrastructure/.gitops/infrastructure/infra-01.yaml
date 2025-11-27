@@ -1,17 +1,17 @@
 apiVersion: artifact.gcp.upbound.io/v1beta1
 kind: Registry
 metadata:
-  name: 9095eef245584e5513bbe7a21529cd0b88065a6f321e36e304-demo-images
+  name: 9095eef245584e5513bbe7a21529cd0b88065a6f321e36e304-images
   namespace: customer-9095eef245584e5513bbe7a21529cd0b88065a6f321e36e304
   labels:
-    app.kubernetes.io/name: demo-images
+    app.kubernetes.io/name: images
     app.kubernetes.io/managed-by: syncable
     syncable.dev/customer-id: XvtIvof7pmCZSfw9g1y1NInJNYooOIBa
     syncable.dev/project-id: de0916fc-44ee-44f2-a104-5788f3f0ab0a
     syncable.dev/resource-type: artifact-registry
     syncable.dev/cloud-provider: gcp
   annotations:
-    crossplane.io/external-name: 9095eef245584e5513bbe7a21529cd0b88065a6f321e36e304-demo-images
+    crossplane.io/external-name: 9095eef245584e5513bbe7a21529cd0b88065a6f321e36e304-images
     syncable.dev/description: Artifact Registry for
       XvtIvof7pmCZSfw9g1y1NInJNYooOIBa/de0916fc-44ee-44f2-a104-5788f3f0ab0a
 spec:
