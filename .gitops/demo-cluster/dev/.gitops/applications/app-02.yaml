@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: gapps
+  namespace: customer-9095eef245584e5513bbe7a21529cd0b88065a6f321e36e304
+  labels:
+    app.kubernetes.io/name: gapps
+    app.kubernetes.io/instance: 9095eef2-gapps
+    app.kubernetes.io/version: b293af7
+    app.kubernetes.io/component: backend
+    app.kubernetes.io/part-of: 9095eef245584e5513bbe7a21529cd0b88065a6f321e36e304
+    app.kubernetes.io/managed-by: syncable
+    syncable.dev/customer-id: XvtIvof7pmCZSfw9g1y1NInJNYooOIBa
+    syncable.dev/project-id: de0916fc-44ee-44f2-a104-5788f3f0ab0a
+    environment: production
+spec:
+  type: ClusterIP
+  selector:
+    app.kubernetes.io/name: gapps
+    app.kubernetes.io/instance: XvtIvof7pmCZSfw9g1y1NInJNYooOIBa-gapps
+  ports:
+    - name: http
+      port: 80
+      targetPort: http
+      protocol: TCP
