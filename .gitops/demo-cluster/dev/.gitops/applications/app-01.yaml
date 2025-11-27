@@ -6,7 +6,7 @@ metadata:
   labels: &a1
     app.kubernetes.io/name: gapps
     app.kubernetes.io/instance: 9095eef2-gapps
-    app.kubernetes.io/version: b293af7
+    app.kubernetes.io/version: 2e3842f
     app.kubernetes.io/component: backend
     app.kubernetes.io/part-of: 9095eef245584e5513bbe7a21529cd0b88065a6f321e36e304
     app.kubernetes.io/managed-by: syncable
@@ -41,7 +41,7 @@ spec:
           type: RuntimeDefault
       containers:
         - name: gapps
-          image: europe-west2-docker.pkg.dev/syncable-461014/9095eef245584e5513bbe7a21529cd0b88065a6f321e36e304-images/customers/xvtivof7pmczsfw9g1y1ninjnyoooiba-bf282a96/de0916fc-44ee-44f2-a104-5788f3f0ab0a-ff24040f-gapps:b293af7
+          image: europe-west2-docker.pkg.dev/syncable-461014/9095eef245584e5513bbe7a21529cd0b88065a6f321e36e304-images/customers/xvtivof7pmczsfw9g1y1ninjnyoooiba-bf282a96/de0916fc-44ee-44f2-a104-5788f3f0ab0a-ff24040f-gapps:2e3842f
           imagePullPolicy: Always
           ports:
             - name: http
