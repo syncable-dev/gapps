@@ -1,8 +1,7 @@
-apiVersion: artifact.gcp.upbound.io/v1beta1
+apiVersion: artifact.gcp.upbound.io/v1beta2
 kind: RegistryRepository
 metadata:
   name: gapps-demo-cluster-apps-images
-  namespace: crossplane-resources
   labels:
     app.kubernetes.io/name: apps-images
     app.kubernetes.io/managed-by: syncable
