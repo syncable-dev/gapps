@@ -15,6 +15,7 @@ metadata:
       XvtIvof7pmCZSfw9g1y1NInJNYooOIBa/48fa957e-1e45-4c8f-a37e-fa91f8dede26
 spec:
   forProvider:
+    project: syncable-461014
     location: europe-west2
     format: DOCKER
     description: Container registry for Syncable project
