@@ -1,5 +1,5 @@
 apiVersion: artifact.gcp.upbound.io/v1beta1
-kind: Registry
+kind: RegistryRepository
 metadata:
   name: c6c8a61e9962cf9d753246fc27782bd18792ba8878ad6548ae-apps-images
   namespace: customer-c6c8a61e9962cf9d753246fc27782bd18792ba8878ad6548ae
