@@ -1,8 +1,8 @@
 apiVersion: artifact.gcp.upbound.io/v1beta1
 kind: RegistryRepository
 metadata:
-  name: c6c8a61e9962cf9d753246fc27782bd18792ba8878ad6548ae-apps-images
-  namespace: customer-c6c8a61e9962cf9d753246fc27782bd18792ba8878ad6548ae
+  name: gapps-demo-cluster-apps-images
+  namespace: crossplane-resources
   labels:
     app.kubernetes.io/name: apps-images
     app.kubernetes.io/managed-by: syncable
@@ -11,7 +11,7 @@ metadata:
     syncable.dev/resource-type: artifact-registry
     syncable.dev/cloud-provider: gcp
   annotations:
-    crossplane.io/external-name: c6c8a61e9962cf9d753246fc27782bd18792ba8878ad6548ae-apps-images
+    crossplane.io/external-name: gapps-demo-cluster-apps-images
     syncable.dev/description: Artifact Registry for
       XvtIvof7pmCZSfw9g1y1NInJNYooOIBa/48fa957e-1e45-4c8f-a37e-fa91f8dede26
 spec:
