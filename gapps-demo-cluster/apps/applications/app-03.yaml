@@ -2,17 +2,16 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: gapps-config
-  namespace: customer-c6c8a61e9962cf9d753246fc27782bd18792ba8878ad6548ae
+  namespace: development-apps
   labels:
     app.kubernetes.io/name: gapps
     app.kubernetes.io/instance: c6c8a61e-gapps
-    app.kubernetes.io/version: f189128
-    app.kubernetes.io/component: backend
+    app.kubernetes.io/version: ff0f6bf
     app.kubernetes.io/part-of: c6c8a61e9962cf9d753246fc27782bd18792ba8878ad6548ae
     app.kubernetes.io/managed-by: syncable
     syncable.dev/customer-id: XvtIvof7pmCZSfw9g1y1NInJNYooOIBa
     syncable.dev/project-id: 48fa957e-1e45-4c8f-a37e-fa91f8dede26
-    environment: production
+    environment: development
 immutable: true
 data:
   HOST_NAME: http://localhost:3000

@@ -2,20 +2,19 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: gapps
-  namespace: customer-c6c8a61e9962cf9d753246fc27782bd18792ba8878ad6548ae
+  namespace: development-apps
   labels: &a1
     app.kubernetes.io/name: gapps
     app.kubernetes.io/instance: c6c8a61e-gapps
-    app.kubernetes.io/version: f189128
-    app.kubernetes.io/component: backend
+    app.kubernetes.io/version: ff0f6bf
     app.kubernetes.io/part-of: c6c8a61e9962cf9d753246fc27782bd18792ba8878ad6548ae
     app.kubernetes.io/managed-by: syncable
     syncable.dev/customer-id: XvtIvof7pmCZSfw9g1y1NInJNYooOIBa
     syncable.dev/project-id: 48fa957e-1e45-4c8f-a37e-fa91f8dede26
-    environment: production
+    environment: development
   annotations: &a2
     backstage.io/kubernetes-id: gapps
-    syncable.dev/image-digest: sha256:17a4729de65e739ec4772fe45b0bee6fa0467ee82d25a7ddff6a5e5c69e8484d
+    syncable.dev/image-digest: sha256:e64a7dfcec9a1acadb6ca3dd5f8ba195128a64e42d80a50a9ff80dd74382a1b3
     syncable.dev/generated-by: backstage-scaffolder
 spec:
   replicas: 2
@@ -41,7 +40,7 @@ spec:
           type: RuntimeDefault
       containers:
         - name: gapps
-          image: europe-west2-docker.pkg.dev/syncable-461014/gapps-demo-cluster-apps-images/alex-holmberg-s-organization/gapps/apps/gapps:f189128
+          image: europe-west2-docker.pkg.dev/syncable-461014/gapps-demo-cluster-apps-images/alex-holmberg-s-organization/gapps/apps/gapps:ff0f6bf
           imagePullPolicy: Always
           ports:
             - name: http
