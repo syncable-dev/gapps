@@ -6,7 +6,7 @@ metadata:
   labels: &a1
     app.kubernetes.io/name: gapps
     app.kubernetes.io/instance: c6c8a61e-gapps
-    app.kubernetes.io/version: be40f8d
+    app.kubernetes.io/version: a88187d
     app.kubernetes.io/part-of: c6c8a61e9962cf9d753246fc27782bd18792ba8878ad6548ae
     app.kubernetes.io/managed-by: syncable
     syncable.dev/customer-id: XvtIvof7pmCZSfw9g1y1NInJNYooOIBa
@@ -14,7 +14,7 @@ metadata:
     environment: development
   annotations: &a2
     backstage.io/kubernetes-id: gapps
-    syncable.dev/image-digest: sha256:a6a2bcf6690074c0b631ab4562a57c604b780de26c6915f97ca28f3574d43338
+    syncable.dev/image-digest: sha256:98c7eaeb623f96d057c0169ef318ea823b681b9d34983dc629091884e9d18d09
     syncable.dev/generated-by: backstage-scaffolder
 spec:
   replicas: 2
@@ -40,7 +40,7 @@ spec:
           type: RuntimeDefault
       containers:
         - name: gapps
-          image: europe-west2-docker.pkg.dev/syncable-461014/gapps-demo-cluster-apps-images/alex-holmberg-s-organization/gapps/apps/gapps:be40f8d
+          image: europe-west2-docker.pkg.dev/syncable-461014/gapps-demo-cluster-apps-images/alex-holmberg-s-organization/gapps/apps/gapps:a88187d
           imagePullPolicy: Always
           ports:
             - name: http
